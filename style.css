@@ -1,0 +1,589 @@
+
+/*
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+  */
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    margin-top: 10px;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: white;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #575757;
+}
+
+/* Afficher le dropdown au survol*/ 
+.dropdown:hover .dropdown-menu {
+    display: block;
+} 
+
+
+
+/* Section de lecture */
+.reading-section {
+    background-color: #ffffff;
+    padding: 50px;
+    margin: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Citation */
+.quote {
+    text-align: center;
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.quote p {
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* Arguments */
+.arguments {
+    text-align: center;
+}
+
+.arguments h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #526D82;
+}
+
+.arguments ul {
+    list-style: none;
+    padding: 0;
+}
+
+.arguments li {
+    background-color: #84A7A1;
+    color: black;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arguments li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arguments li h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #CD1818;
+}
+
+.arguments li p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+h2{
+    text-align: center;
+    font-family: serif;
+    color: mediumvioletred;
+}
+
+
+/* Container des livres */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style des livres */
+.book {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image des livres */
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Titre du livre */
+.book h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+    text-transform: uppercase;
+}
+
+/* Résumé du livre */
+.book p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Animation de survol */
+.book:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivité */
+@media (max-width: 1200px) {
+    .book-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .book-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .book-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Conteneur du lien de téléchargement */
+.download-container {
+    text-align: center;
+}
+
+/* Lien de téléchargement */
+.download-link {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet au survol du lien */
+.download-link:hover {
+    color: black;
+    background-color: red;
+    transform: scale(1.05);
+}
+
+/* Animation de l'icône (lorsque le lien est survolé) */
+.download-link .download-icon {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+/* Animation du texte et de l'icône */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        right: -30px;
+    }
+    100% {
+        opacity: 1;
+        right: 20px;
+    }
+}
+
+/* Animation pour faire apparaître le texte au survol */
+.download-link:hover .download-icon {
+    animation: slideIn 0.5s forwards;
+}
+
+
+
+ .parfum-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .parfum-image {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .parfum-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e60000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .parfum-link:hover {
+            background-color: #c40000;
+        }
+
+
+ /* Media Queries */
+        @media (max-width: 768px) {
+            .parfum-container {
+                padding: 15px;
+            }
+
+            .parfum-image {
+                max-width: 250px;
+            }
+
+            .parfum-link {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .parfum-container {
+                padding: 10px;
+            }
+
+            .parfum-image {
+                max-width: 200px;
+            }
+
+            .parfum-link {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+
+
+
+
+
+
+/* Section de contact */
+.contact-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Titre de la section */
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Conteneur des méthodes de contact */
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Conteneur de chaque méthode */
+.contact-item {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Lien de contact */
+.contact-link {
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Style des icônes */
+.contact-link i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol des liens */
+.contact-link:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Effet au survol des icônes */
+.contact-link i:hover {
+    transform: scale(1.2);
+}
+
+/* Animation d'apparition des icônes */
+.contact-item {
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+.contact-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.contact-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.contact-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.contact-item:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* Animation d'apparition et de glissement */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+
+/* *Style général pour tous les écrans */*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.book {
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+
+}
+
+
+ 
+
+/* Styles pour écrans de téléphones (max 768px) */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .book-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book {
+        width: 90%;
+    }
+}
+
+/* Styles pour tablettes (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .book {
+        width: 45%;
+    }
+}
+
+/* Styles pour écrans d'ordinateurs (min 1024px) */
+@media screen and (min-width: 1024px) {
+    .navbar ul {
+        justify-content: space-between;
+    }
+
+    .book-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .book {
+        width: 22%;
+    }
+}
+
+

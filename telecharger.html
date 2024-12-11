@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offre Professionnelle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .offer-container {
+            text-align: center;
+            padding: 20px;
+            background: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .offer-container h1 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .highlight {
+            color: #e63946;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        .contact-link {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2a9d8f;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .contact-link:hover {
+            background: #21867a;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offer-container">
+        <h1>Si ce livre vous intéresse, n'hésitez pas à nous contacter. <br>
+        <span class="highlight">Les prix sont très compétitifs et bien inférieurs à ceux des autres sites.</span></h1>
+        <a href="index2.html" class="contact-link">Nous contacter</a>
+    </div>
+</body>
+</html>
